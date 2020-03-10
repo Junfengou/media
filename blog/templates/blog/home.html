@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
+        <script type="text/javascript" src="test.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}">
+    </head>
+
+    <body>
+        <header>
+            <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+            <!-Below is the nav bar->
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="{% url 'blog-home' %}">Home</a></li>
+                    <li><a href="{% url 'blog-recent' %}">Recent Themes</a></li>
+                    <li><a href="{% url 'blog-help' %}">Help</a></li>
+                    <li><a href="{% url 'blog-profile' %}">My Profile</a></li>
+                </ul>
+            </nav>
+            <!-Nav bar stop here, copy it to other html->
+
+            <a class="logout" href="#"><button>Logout</button></a>
+            </div>
+        </header>
+        <h1>Theme of the day</h1>
+        <p>Cute Kitten</p>
+    </body>
+</html>
+

@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0px;
+    background: #222;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+  }
+
+header {
+    background: #55d6aa;
+  }
+
+li, a, button {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: 500;
+    font-size: 16px;
+    color: #444;
+    text-decoration: none;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_bar {
+    list-style: none;
+}
+
+.nav_bar li {
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: underline;
+}
+
+.nav_bar li a {
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav_bar li a:hover {
+    color: orange;
+}
+
+.logout button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+h1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    text-align: center;
+    color: #55d6aa;
+}
+
+p{
+    font-family: 'ZCOOL KuaiLe', cursive;
+    text-align: center;
+    color: #55d6aa;
+}
