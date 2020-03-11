@@ -30,8 +30,8 @@
             {{ form.as_p }}
             {% csrf_token %}
             <p><button type="submit" value="login">Login</button></p>
-            <p>Forgot your password? <button type="#" value="recover">Recover password</button></p>
-            <p>Sign up for a account! <button type="#" value="signup">Sign up for Account</button></p>
         </form>
+        <p>Forgot your password? <button type="#" value="recover">Recover password</button></p>
+        <p>Sign up for a account! <a class="login" href="{% url 'blog-register' %}"><button>Sign up for a account</button></a></p>
     </body>
 </html>

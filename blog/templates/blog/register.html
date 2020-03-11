@@ -39,9 +39,9 @@
             <p>{{form.password2.label}}
             {{form.password2}} * Please re-enter the password *</p>
             <p><input type="submit" name="Create User"></p>
-            
 
-            <p>Already have an account? <button type="#" value="signup">Sign in</button></p>
+            {{ form.errors }}
         </form>
+        <p>Already have an account? <a class="login" href="{% url 'blog-login' %}"><button>Sign in</button></a></p>
     </body>
 </html>
