@@ -24,10 +24,21 @@
         </header>
         <!-Nav bar stop here, copy it to other html->
 
-        <h1>Social Media Company</h1>
-        <p>Welcome to my domain! This is my first attempt at creating a social media website</p>
-        <p>Returning user? <a class="login" href="{% url 'blog-login' %}"><button>Login</button></a></p>
-        <p>First time here? <a class="login" href="{% url 'blog-register' %}"><button>Sign up for a account</button></a></p>
+        <h1>Register page</h1>
+        <p method="POST" action="">
+            {% csrf_token %}
+            <p>{{form.username.label}}
+            {{form.username}} * Please enter your username *</p>
+
+            <p>{{form.email.label}}
+            {{form.email}} * Please enter your email *</p>
+
+            <p>{{form.password1.label}}
+            {{form.password1}} * Please enter your password *</p>
+
+            <p>{{form.password2.label}}
+            {{form.password2}} * Please re-enter the password *</p>
+            <p><input type="submit" name="Create User"></p>
+        </form>
     </body>
 </html>
-
