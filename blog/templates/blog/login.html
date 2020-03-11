@@ -9,7 +9,7 @@
 
     <body>
         <header>
-            <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+            <a href="{% url 'blog-home' %}"><img class="logo" src="{% static 'image/logo.png' %}" alt="logo" ></a>
             <!-Below is the nav bar->
             <nav class="nav_bar">
                 <ul>
@@ -19,19 +19,19 @@
                     <li><a href="{% url 'blog-profile' %}">My Profile</a></li>
                 </ul>
             </nav>
-            <!-Nav bar stop here, copy it to other html->
 
             <a class="logout" href="#"><button>Logout</button></a>
-            </div>
         </header>
+        <!-Nav bar stop here, copy it to other html->
+
         <h1>Login page</h1>
         <p>Welcome back! Go ahead and enter your info to sign in!</p>
         <form action="." method="post">
             {{ form.as_p }}
             {% csrf_token %}
             <p><button type="submit" value="login">Login</button></p>
-            <p><button type="submit" value="recover">Recover password</button></p>
-            <p><button type="submit" value="signup">Sign up for Account</button></p>
+            <p>Forgot your password? <button type="#" value="recover">Recover password</button></p>
+            <p>Sign up for a account! <button type="#" value="signup">Sign up for Account</button></p>
         </form>
     </body>
 </html>

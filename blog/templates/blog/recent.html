@@ -9,7 +9,8 @@
 
     <body>
         <header>
-            <img class="logo" src="{% static 'image/logo.png' %}" alt="logo">
+            <a href="{% url 'blog-home' %}"><img class="logo" src="{% static 'image/logo.png' %}" alt="logo" ></a>
+            <!-Below is the nav bar->
             <nav class="nav_bar">
                 <ul>
                     <li><a href="{% url 'blog-home' %}">Home</a></li>
@@ -18,9 +19,11 @@
                     <li><a href="{% url 'blog-profile' %}">My Profile</a></li>
                 </ul>
             </nav>
+
             <a class="logout" href="#"><button>Logout</button></a>
-            </div>
         </header>
+        <!-Nav bar stop here, copy it to other html->
+
         <h1>Recent</h1>
     </body>
 </html>

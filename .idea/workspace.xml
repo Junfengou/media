@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ee438439-0d70-4e54-bc44-54551372c0ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/blog/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/blog/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/help.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/recent.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/recent.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
@@ -26,6 +31,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Python\media\blog\templates\blog" />
+      <recent name="D:\Python\media\blog\templates\registration" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />

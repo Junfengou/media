@@ -6,6 +6,9 @@ from .forms import LoginForm
 
 # Create your views here.
 
+def welcome(request):
+    return render(request, 'blog/welcome.html')
+
 
 def home(request):
     return render(request, 'blog/home.html')

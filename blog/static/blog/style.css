@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0px;
@@ -49,7 +50,7 @@ header {
     color: orange;
 }
 
-.logout button {
+button {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
     border: none;
@@ -72,4 +73,8 @@ p{
     font-family: 'ZCOOL KuaiLe', cursive;
     text-align: center;
     color: #55d6aa;
+}
+
+.loginblock {
+    text-align: center;
 }

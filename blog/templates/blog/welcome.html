@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
@@ -24,6 +24,10 @@
         </header>
         <!-Nav bar stop here, copy it to other html->
 
-        <h1>Profile page</h1>
+        <h1>Social Media Company</h1>
+        <p>Welcome to my domain! This is my first attempt at creating a social media website</p>
+        <p>Returning user? <a class="login" href="{% url 'blog-login' %}"><button>Login</button></a></p>
+        <p>First time here? <a class="login" href="#"><button>Sign up for a account</button></a></p>
     </body>
 </html>
+
