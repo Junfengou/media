@@ -29,9 +29,9 @@
         <form action="." method="post">
             {{ form.as_p }}
             {% csrf_token %}
-            <p><button type="submit">Login</button></p>
-            <p><button type="submit">Recover password</button></p>
-            <p><button type="submit">Sign up for Account</button></p>
+            <p><button type="submit" value="login">Login</button></p>
+            <p><button type="submit" value="recover">Recover password</button></p>
+            <p><button type="submit" value="signup">Sign up for Account</button></p>
         </form>
     </body>
 </html>

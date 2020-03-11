@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ee438439-0d70-4e54-bc44-54551372c0ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/media/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +25,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SocialMedia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -42,9 +45,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="253" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583809338242" />
-    <state x="267" y="278" key="FileChooserDialogImpl" timestamp="1583810126468">
+    <state x="267" y="278" key="FileChooserDialogImpl" timestamp="1583874837403">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="267" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583810126468" />
+    <state x="267" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1583874837403" />
   </component>
 </project>
