@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, CreateUserForm
@@ -54,5 +54,5 @@ def user_register(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-
+            return redirect('blog-login')
     return render(request, 'blog/register.html', {'form': form})
