@@ -7,10 +7,6 @@ body {
     font-weight: 500;
   }
 
-header {
-    background: #55d6aa;
-  }
-
 li, a, button {
     font-family: 'ZCOOL KuaiLe', cursive;
     font-weight: 500;
@@ -24,6 +20,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    background: #55d6aa;
     padding: 30px 10%;
 }
 
@@ -57,13 +55,14 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    margin-right: 20px;
 }
 
 button:hover{
     background-color: orange;
 }
 
-h1 {
+h1, h2 {
     font-family: 'ZCOOL KuaiLe', cursive;
     text-align: center;
     color: #55d6aa;

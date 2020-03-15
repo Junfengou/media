@@ -20,7 +20,8 @@
                 </ul>
             </nav>
 
-            <a class="logout" href="#"><button>Logout</button></a>
+            <a class="profile" href="{% url 'blog-profile' %}"><button>{{request.user}}</button></a>
+            <a class="logout" href="{% url 'blog-logout' %}"><button>Logout</button></a>
         </header>
         <!-Nav bar stop here, copy it to other html->
 

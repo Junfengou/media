@@ -20,7 +20,7 @@
                 </ul>
             </nav>
 
-            <a class="logout" href="#"><button>Logout</button></a>
+            <a class="logout" href="{% url 'blog-logout' %}"><button>Logout</button></a>
         </header>
         <!-Nav bar stop here, copy it to other html->
 
@@ -31,6 +31,10 @@
             {% csrf_token %}
             <p><button type="submit" value="login">Login</button></p>
         </form>
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+
         <p>Forgot your password? <button type="#" value="recover">Recover password</button></p>
         <p>Sign up for a account! <a class="login" href="{% url 'blog-register' %}"><button>Sign up for a account</button></a></p>
     </body>
