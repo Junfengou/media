@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/blog/resetpassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/resetpassword.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/resetpasswordform.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/resetpasswordform.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
