@@ -114,6 +114,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Store images in the base directory of the project inside a folder name profile_pic
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # SMTP config backend info for mail communication
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

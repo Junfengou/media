@@ -26,5 +26,26 @@
         <!-Nav bar stop here, copy it to other html->
 
         <h1>Profile page</h1>
+            <div class="content-section">
+                <div class="media">
+                    <img class="round-circle account-img" src="{{ user.profile.image.url }}">
+                    <div class="media-body">
+                        <h2 class="account-heading">{{ user.username }}</h2>
+                        <p class="text-secondary">{{ user.email }} <br> {{ user.first_name }}
+                        <br> {{ user.last_name }}</p>
+                    </div>
+                </div>
+            </div>
     </body>
 </html>
+
+<style>
+    img {
+        display : block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px 50px;
+        width: auto;
+        height: 100px;
+    }
+</style>

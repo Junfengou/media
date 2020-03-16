@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, CreateUserForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .decorator import unauthenticated_user, allowed_users
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -14,6 +15,7 @@ def welcome(request):
 
 
 @login_required(login_url='blog-login')
+# @allowed_users(allowed_roles=['admin'])
 def home(request):
     return render(request, 'blog/home.html')
 
@@ -33,6 +35,7 @@ def profile(request):
     return render(request, 'blog/profile.html')
 
 
+@unauthenticated_user
 def user_login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -60,6 +63,7 @@ def user_logout(request):
     return redirect('blog-login')
 
 
+@unauthenticated_user
 def user_register(request):
     form = CreateUserForm()
     if request.method == 'POST':
