@@ -1,4 +1,5 @@
 {% load static %}
+{% load crispy_forms_tags %}
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
@@ -35,6 +36,23 @@
                         <br> {{ user.last_name }}</p>
                     </div>
                 </div>
+                    <form method="POST" enctype="multipart/form-data">
+                        <p>Change your info</p>
+                        <p>-----------------------</p>
+                        {% csrf_token %}
+                         <p>username
+                        {{u_form.username}}</p>
+
+                        <p>First name
+                        {{u_form.first_name}}</p>
+
+                        <p>Last name
+                        {{u_form.last_name}}</p>
+                        <p>
+                        {{p_form.as_p}}</p>
+                        <p><button input type="submit" name="Create User">update</button></p>
+                        {{ form.errors }}
+                    </form>
             </div>
     </body>
 </html>

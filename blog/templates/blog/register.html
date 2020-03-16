@@ -39,7 +39,14 @@
 
             <p>{{form.password2.label}}
             {{form.password2}} * Please re-enter the password *</p>
-            <p><input type="submit" name="Create User"></p>
+
+            <p>{{form.first_name.label}}
+            {{form.first_name}} * Please enter your first name *</p>
+
+            <p>{{form.last_name.label}}
+            {{form.last_name}} * Please enter your last name *</p>
+
+            <p><button input type="submit" name="Create User">Submit</button></p>
 
             {{ form.errors }}
         </form>
