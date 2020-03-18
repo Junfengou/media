@@ -8,10 +8,10 @@ from django.utils import timezone
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    # bio = models.CharField(max_length=200)
     image = models.ImageField(default='default.jpg', upload_to='profile_pic')
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
+    my_story = models.CharField(max_length=200, null=True)
 
     def __str__(self):
         return f'{self.user.username} Profile'
+
+

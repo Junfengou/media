@@ -3,7 +3,7 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
-        <script type="text/javascript" src="test.js"></script>
+        <script type="text/javascript" src="{% static 'blog/function.js'%}"></script>
         <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}">
     </head>
@@ -29,13 +29,19 @@
         <h1>Profile page</h1>
             <div class="content-section">
                 <div class="media">
-                    <img class="round-circle account-img" src="{{ user.profile.image.url }}">
+                    <img src="{{ user.profile.image.url }}">
                     <div class="media-body">
-                        <h2 class="account-heading">{{ user.username }}</h2>
-                        <p class="text-secondary">{{ user.email }} <br> {{ user.first_name }}
-                        <br> {{ user.last_name }}</p>
+                        <h2 class="account-heading">Username:  {{ user.username }}</h2>
+                        <p class="text-secondary">Email: {{ user.email }}<br> First name: {{ user.first_name }}
+                        <br> Last name: {{ user.last_name }}
+                        <br> Bio: {{ p_form.my_story.value }}</p>
                     </div>
                 </div>
+                <p class="wrapper">
+                    <p><button onclick="hideThisFunc()">Edit info</button></p>
+                </div>
+
+                <div id="hidden" style="display: none;">
                     <form method="POST" enctype="multipart/form-data">
                         <p>Change your info</p>
                         <p>-----------------------</p>
@@ -49,10 +55,16 @@
                         <p>Last name
                         {{u_form.last_name}}</p>
                         <p>
-                        {{p_form.as_p}}</p>
+
+                        <p>
+                        {{p_form.image}}</p>
+
+                        <p>Bio
+                        {{p_form.my_story}}</p>
                         <p><button input type="submit" name="Create User">update</button></p>
                         {{ form.errors }}
                     </form>
+                </div>
             </div>
     </body>
 </html>
