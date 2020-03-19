@@ -6,6 +6,14 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .decorator import unauthenticated_user, allowed_users
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
+    DeleteView
+)
 
 
 # Create your views here.
@@ -95,3 +103,5 @@ def user_register(request):
             messages.success(request, 'Account was created for ' + user)
             return redirect('blog-login')
     return render(request, 'blog/register.html', {'form': form})
+
+
