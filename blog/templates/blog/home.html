@@ -27,6 +27,34 @@
         <h1>Theme of the day</h1>
         <p>Cute Kitten</p>
 
+
+        {% for post in posts %}
+    <p><img class="imageclass" src="{{ post.user.profile.image.url }}">{{ post.user }}</p>
+        <p><img class="post" src="{{ post.image.url }}"> </p>
+        <p>{{ post.caption }}</p>
+    <p>{{ post.created }}</p>
+        {% endfor %}
+
+
     </body>
 </html>
 
+<style>
+    .imageclass {
+        display : block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px 50px;
+        width: auto;
+        height: 100px;
+    }
+
+    .post {
+        display : block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px 50px;
+        width: auto;
+        height: 100px;
+    }
+</style>

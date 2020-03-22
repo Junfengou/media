@@ -3,13 +3,16 @@ from . import views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import (
+    PostListView,
+)
 
 urlpatterns = [
     path('', views.welcome, name='blog-welcome'),
     path('login/', views.user_login, name='blog-login'),
     path('logout/', views.user_logout, name='blog-logout'),
     path('register/', views.user_register, name='blog-register'),
-    path('home/', views.home, name='blog-home'),
+    path('home/', PostListView.as_view(), name='blog-home'),
     path('recent/', views.recent, name='blog-recent'),
     path('help/', views.helpme, name='blog-help'),
     path('profile/', views.profile, name='blog-profile'),
@@ -30,6 +33,7 @@ urlpatterns = [
     path('reset_password_complete/',
          auth_views.PasswordResetCompleteView.as_view(template_name='blog/resetpasswordcomplete.html'),
          name='password_reset_complete'),
+
 ]
 
 if settings.DEBUG:

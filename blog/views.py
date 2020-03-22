@@ -5,6 +5,7 @@ from .forms import LoginForm, CreateUserForm, UserUpdateForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .decorator import unauthenticated_user, allowed_users
+from .models import Post
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (
@@ -14,6 +15,10 @@ from django.views.generic import (
     UpdateView,
     DeleteView
 )
+
+"""
+from .forms import ImageCreateForm
+"""
 
 
 # Create your views here.
@@ -25,7 +30,16 @@ def welcome(request):
 @login_required(login_url='blog-login')
 # @allowed_users(allowed_roles=['admin'])
 def home(request):
+    context = {
+        'posts': Post.objects.all()
+    }
     return render(request, 'blog/home.html')
+
+
+class PostListView(ListView):
+    model = Post
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
 
 
 @login_required(login_url='blog-login')
@@ -105,3 +119,23 @@ def user_register(request):
     return render(request, 'blog/register.html', {'form': form})
 
 
+"""
+@login_required(login_url='blog-login')
+def image_created(request):
+    if request.method == 'POST':
+        form = ImageCreateForm(data=request.POST)
+        if form.is_valid():
+            cd = form.cleaned_data
+            new_item = form.save(commit=False)
+            new_item.user = request.user
+            new_item.save()
+            messages.success(request, 'Image added successfully')
+            return redirect(new_item.get_absolute_url())
+    else:
+        form = ImageCreateForm(data=request.GET)
+
+    return render(request,
+                  'blog/created.html',
+                  {'section': 'images',
+                   'form': form})
+"""
