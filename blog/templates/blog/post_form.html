@@ -1,0 +1,39 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600">
+        <script type="text/javascript" src="test.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}">
+    </head>
+
+    <body>
+        <header>
+            <a href="{% url 'blog-home' %}"><img class="logo" src="{% static 'image/logo.png' %}" alt="logo" ></a>
+            <!-Below is the nav bar->
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="{% url 'blog-home' %}">Home</a></li>
+                    <li><a href="{% url 'blog-recent' %}">Recent Themes</a></li>
+                    <li><a href="{% url 'blog-help' %}">Help</a></li>
+                    <li><a href="{% url 'blog-profile' %}">My Profile</a></li>
+                </ul>
+            </nav>
+
+
+            <a class="logout" href="{% url 'blog-logout' %}"><button>Logout</button></a>
+        </header>
+        <!-Nav bar stop here, copy it to other html->
+
+        <h1>Post</h1>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Image {{form.image}}</p>
+            <p>Caption {{form.caption}}</p>
+            <p><button input type="submit" name="Create User">Post</button></p>
+
+            {{ form.errors }}
+        </form>
+    </body>
+</html>

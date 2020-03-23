@@ -5,6 +5,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from .views import (
     PostListView,
+    PostDetailView,
+    PostCreateView,
+    PostUpdateView,
+    PostDeleteView
 )
 
 urlpatterns = [
@@ -12,10 +16,14 @@ urlpatterns = [
     path('login/', views.user_login, name='blog-login'),
     path('logout/', views.user_logout, name='blog-logout'),
     path('register/', views.user_register, name='blog-register'),
-    path('home/', PostListView.as_view(), name='blog-home'),
     path('recent/', views.recent, name='blog-recent'),
     path('help/', views.helpme, name='blog-help'),
     path('profile/', views.profile, name='blog-profile'),
+    path('home/', PostListView.as_view(), name='blog-home'),
+    path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+    path('post/new/', PostCreateView.as_view(), name='post-create'),
+    path('post/<int:pk>/update/', PostUpdateView.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
 
     # Path below are for reset passwords
     path('reset_password/',
