@@ -1,12 +1,7 @@
-from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .models import Profile, Post
+from .models import Profile
 from django import forms
-from .models import Image
-from urllib import request
-from django.core.files.base import ContentFile
-from django.utils.text import slugify
 
 
 class LoginForm(forms.Form):
