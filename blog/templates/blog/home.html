@@ -7,7 +7,6 @@
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css'%}">
     </head>
 
-    <body>
         <header>
             <a href="{% url 'blog-home' %}"><img class="logo" src="{% static 'image/logo.png' %}" alt="logo" ></a>
             <!-Below is the nav bar->
@@ -24,23 +23,36 @@
         </header>
         <!-Nav bar stop here, copy it to other html->
 
-        <h1>Theme of the day</h1>
+        <h1>What's on your mind?</h1>
         <p>Cute Kitten</p>
 
 
         {% for post in posts %}
-    <p><img class="imageclass" src="{{ post.user.profile.image.url }}">{{ post.user }}</p>
-        <p><img class="post" src="{{ post.image.url }}"> </p>
-        <p>{{ post.caption }}</p>
-    <p>{{ post.created }}</p>
+        <div class="box">
+            <img class="profile-img" src="{{ post.user.profile.image.url }}">
+            <p>{{ post.user }}</p>
+            <p><img class="post" src="{{ post.image.url }}"></p>
+            <p>{{ post.caption }}</p>
+            <p>{{ post.created }}</p>
+        </div>
         {% endfor %}
-
 
     </body>
 </html>
 
 <style>
-    .imageclass {
+    .box {
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 45px;
+        margin: 0 auto;
+        width: 320px;
+        height: auto;
+        display: flex;
+        flex-direction: column
+    }
+
+    .profile-img {
         display : block;
         margin-left: auto;
         margin-right: auto;
@@ -50,11 +62,9 @@
     }
 
     .post {
-        display : block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 15px 50px;
-        width: auto;
-        height: 100px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 5px;
+        width: 300px;
     }
 </style>
